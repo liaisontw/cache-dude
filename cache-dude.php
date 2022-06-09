@@ -43,12 +43,13 @@ global $wpdb;
  */
 require_once plugin_dir_path(__FILE__) . '/includes/class-cache-dude.php';
 global $cache_dude;
+$cache_dude = new Cache_Dude();
 
 
 
 /**
  * The code that runs during plugin activation.
- * This action is documented in includes/class-poll-dude-activator.php
+ * This action is documented in includes/class-cache-dude-activator.php
  */
 function cache_dude_activate_init($network_wide) {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-cache-dude-activator.php';

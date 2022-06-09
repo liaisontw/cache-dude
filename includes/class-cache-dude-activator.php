@@ -10,7 +10,7 @@
  * @subpackage cache-dude/includes
  * @author     Liaison Chang
  */
-class Poll_Dude_Activator {
+class Cache_Dude_Activator {
 
 	/**
 	 * Short Description. (use period)
@@ -49,12 +49,8 @@ class Poll_Dude_Activator {
 		}
 
 		$charset_collate = $wpdb->get_charset_collate();
-
-		$create_table = array();
-
-		
+		$create_table = array();	
 	}
-
 }
 
 
