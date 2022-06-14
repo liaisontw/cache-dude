@@ -82,14 +82,14 @@ class Cache_Dude {
 	 * @access   private
 	 */
 	private function load_dependencies() {
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-cache-dude-utility.php';
+		//require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-cache-dude-utility.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the admin area.
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-cache-dude-admin.php';
 
-		$this->utility = new cache_dude\Cache_Dude_Utility();		
+		//$this->utility = new cache_dude\Cache_Dude_Utility();		
 		add_action( 'plugins_loaded',  	array($this, 'set_textdomain') );
 	}
 
