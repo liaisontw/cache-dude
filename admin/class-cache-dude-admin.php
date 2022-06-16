@@ -46,11 +46,15 @@ class Cache_Dude_Admin {
 	}
 
 	public function admin_scripts($hook_suffix){
+		$this->enqueue_scripts();
+		$this->enqueue_styles();
+		/*
 		$admin_pages = array($this->plugin_name.'/cache-dude.php', $this->plugin_name.'/view/page-poll-dude-add-form.php', $this->plugin_name.'/view/page-poll-dude-control-panel.php', $this->plugin_name.'/view/page-cache-dude-options.php');
 		if(in_array($hook_suffix, $admin_pages, true)) {			
 			$this->enqueue_scripts();
 			$this->enqueue_styles();
 		}
+		*/
 	}
 
 	/**
@@ -59,7 +63,7 @@ class Cache_Dude_Admin {
 	 * @since    1.0.0
 	 */
 	public function enqueue_styles() {
-		//wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/cache-dude-admin.css', array(), $this->version, 'all' );
+		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/jquery-ui.css', array(), $this->version, 'all' );
 	}
 
 	/**
@@ -68,8 +72,7 @@ class Cache_Dude_Admin {
 	 * @since    1.0.0
 	 */
 	public function enqueue_scripts() {
-		//wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/cache-dude-admin.js', array( 'jquery' ), $this->version, true );
-		//wp_enqueue_script( 'chart_js', plugin_dir_url( __FILE__ ) . 'js/lib/chart.min.js', array('jquery'), false);
+        wp_enqueue_script('jquery-ui-tabs');
 	}
 
 	public function admin_menu() {
